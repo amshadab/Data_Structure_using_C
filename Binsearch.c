@@ -15,7 +15,7 @@ void main()
     printf("Enter element to be search: ");
     scanf("%d",&target);
     low=0;
-    high=4;
+    high=n;
     mid=(low+high)/2;
     if(arr[mid]==target)
     {

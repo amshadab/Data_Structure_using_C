@@ -4,7 +4,7 @@
 #define max 5
 int stack[max], top = -1;
 void push(int num);
-void pop(int num);
+void pop();
 void display();
 void main()
 {
@@ -25,7 +25,7 @@ void main()
         }
         case 2:
         {
-            pop(num);
+            pop();
             break;
         }
         case 3:
@@ -57,8 +57,9 @@ void push(int num)
         stack[top] = num;
     }
 }
-void pop(int num)
+void pop()
 {
+    int num;
     if (top == -1)
     {
         printf("\nStack is underflow");

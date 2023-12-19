@@ -16,11 +16,13 @@ void main()
   for (i = 1; i < n; i++)
   {
     key = arr[i];
-    for (j = i - 1; j >= 0 && key < arr[j]; j--)
-    { 
-      arr[j+1]=arr[j];
-    }
-    arr[j+1]=key;
+   j=i-1;
+   while(j>=0 && key<arr[j])
+   {
+    arr[j+1]=arr[j];
+    j--;
+   }
+   arr[j+1]=key;
   }
   for (i = 0; i < n; i++)
   {

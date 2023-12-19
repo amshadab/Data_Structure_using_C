@@ -3,12 +3,12 @@
 #include <conio.h>
 #define max 5
 int stack[max], top = -1;
-void push(int num);
+void push();
 void pop();
 void display();
 void main()
 {
-    int ch, num;
+    int ch;
     do
     {
         printf("\n1.Push\n2.Pop\n3.Display");
@@ -18,9 +18,8 @@ void main()
         {
         case 1:
         {
-            printf("\nEnter number to be push: ");
-            scanf("%d", &num);
-            push(num);
+
+            push();
             break;
         }
         case 2:
@@ -44,9 +43,11 @@ void main()
     } while (ch != 4);
     getch();
 }
-void push(int num)
+void push()
 {
-
+    int num;
+    printf("\nEnter number to be push: ");
+    scanf("%d", &num);
     if (top == max - 1)
     {
         printf("\nStack overflow!");
